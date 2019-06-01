@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ <title>task3</title>
+ <link rel="stylesheet" type="text/css" href="css/test.css">
+ <script>
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			var json=JSON.parse(xmlhttp.responseText);
+            var father1=document.getElementById("tem");
+                  var father2=document.getElementById("city_content")
+                  var father3=document.getElementById("wea")
+                  var father4=document.getElementById("text1")
+                  var father5=document.getElementById("today_left")
+                  var father6=document.getElementById("today_right")
+                  var father7=document.getElementById("tomorrow_left")
+                  var father8=document.getElementById("tomorrow_right")
+                  var father9=document.getElementById("cont2")
+                  var father10=document.getElementById("cont3")
+                  var father11=document.getElementById("cont4")
+                  var father12=document.getElementById("cont5")
+                  var father13=document.getElementById("cont6")
+                  var father14=document.getElementById("cont7")
+                  var father15=document.getElementById("cont8")
+                  var father16=document.getElementById("cont9")
+                  var father17=document.getElementById("cont10")
+                  var father18=document.getElementById("cont11")
+
+
+               var p1=document.createElement("p");
+               p1.innerHTML=json.city;
+               father2.appendChild(p1);     
+               
+               var p2=document.createElement("p");
+               p2.innerHTML=json.data[0].tem1;
+               father1.appendChild(p2);
+
+               var p3=document.createElement("p");
+               p3.innerHTML=json.data[0].wea;
+               father3.appendChild(p3);
+
+               var p4=document.createElement("p");
+               p4.innerHTML=json.data[0].air_tips;
+               father4.appendChild(p4);
+
+               var p5=document.createElement("p");
+               p5.innerHTML=json.data[0].day;
+               father5.appendChild(p5);
+
+               var p5=document.createElement("p");
+               p5.innerHTML=json.data[0].wea;
+               father5.appendChild(p5);
+
+               var p6=document.createElement("p");
+               p6.innerHTML=json.data[0].tem1+" /"+json.data[0].tem2;
+               father6.appendChild(p6);
+
+               var p7=document.createElement("p");
+               p7.innerHTML=json.data[1].day;
+               father7.appendChild(p7);
+
+               var p7=document.createElement("p");
+               p7.innerHTML=json.data[1].wea;
+               father7.appendChild(p7);
+
+               var p8=document.createElement("p");
+               p8.innerHTML=json.data[1].tem1+" /"+json.data[1].tem2;
+               father8.appendChild(p8);
+
+               var p9=document.createElement("p");
+               p9.innerHTML=json.data[0].hours[0].day;
+               father9.appendChild(p9);
+
+               var p10=document.createElement("p");
+               p10.innerHTML=json.data[0].hours[0].tem;
+               father10.appendChild(p10);
+
+               var p11=document.createElement("p");
+               p11.innerHTML=json.data[0].hours[1].day;
+               father11.appendChild(p11);
+
+               var p12=document.createElement("p");
+               p12.innerHTML=json.data[0].hours[1].tem;
+               father12.appendChild(p12);
+
+               var p13=document.createElement("p");
+               p13.innerHTML=json.data[0].hours[2].day;
+               father13.appendChild(p13);
+
+               var p14=document.createElement("p");
+               p14.innerHTML=json.data[0].hours[2].tem;
+               father14.appendChild(p14);
+
+               var p15=document.createElement("p");
+               p15.innerHTML=json.data[0].hours[3].day;
+               father15.appendChild(p15);
+
+               var p16=document.createElement("p");
+               p16.innerHTML=json.data[0].hours[3].tem;
+               father16.appendChild(p16);
+
+               var p17=document.createElement("p");
+               p17.innerHTML=json.data[1].hours[0].day;
+               father17.appendChild(p17);
+
+               var p18=document.createElement("p");
+               p18.innerHTML=json.data[1].hours[0].tem;
+               father18.appendChild(p18);
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+			
+		}
+	}
+		
+	xmlhttp.open("GET","https://www.tianqiapi.com/api/?version=v1",true);
+	xmlhttp.send();
+    
+
+
+
+
+</script>
+
+</head>
+<body style="margin: 0px;">
+<div id="banner">
+    <div id="city">
+        <img id="return" src="img/fanhui.png">
+        <div id="city_content"></div>
+        <img id="share" src="img/share.png">
+    </div>
+    <div id="now_weather">
+        <div id="tem"></div>
+        <div id="wea"></div>
+        <div id="text">
+            <marquee id="text" direction="up" behavior="scroll" scrollamount="8" scrolldelay="0" loop="-1" hspace="10" vspace="10">
+                <p id="text1"></p>
+            </marquee>
+        </div>
+    </div>
+</div>
+<div id="today_tomorrow">
+    <div id="today">
+        <div id="today_left"></div>
+        <div id="today_right">
+            <img src="img/101.png">
+        </div>
+
+    </div>
+    <div id="tomorrow">
+        <div id="tomorrow_left"></div>
+        <div id="tomorrow_right">
+            <img src="img/101.png">
+        </div>
+
+    </div>
+</div>
+<div id="hours">
+    <div id="hours_cont">
+        <div id="cont1">
+            <p id="cont2"></p>
+            <img src="img/duoyun.png">
+            <p id="cont3"></p>
+        </div>
+        <div id="cont1">
+           <p id="cont4"></p>
+            <img src="img/qing.png">
+            <p id="cont5"></p>    
+        </div>
+        <div id="cont1">
+            <p id="cont6"></p>
+            <img src="img/duoyun.png">
+            <p id="cont7"></p>    
+        </div>
+        <div id="cont1">
+            <p id="cont8"></p>
+            <img src="img/yu.png">
+            <p id="cont9"></p>    
+
+        </div>
+        <div id="cont1">
+            <p id="cont10"></p>
+            <img src="img/qing.png">
+            <p id="cont11"></p>    
+        </div>
+    </div>
+    
+</div>
+<div id="week"></div>
+<div id="suggestion">
+    <div id="sugg_cont_top">
+        <div id="top_cont1">
+            <img src="img/yifu.png">
+            <div id="top_text">
+                <span >热</span></br>
+                <span class="span1">穿衣</span>
+            </div>
+        </div>
+        <div id="top_cont1">
+            <img src="img/yusan.png">
+            <div id="top_text">
+                <span>不带伞</span>
+                <span class="span1">雨伞</span>
+            </div>
+
+        </div>
+        <div id="top_cont1">
+            <img src="img/yao.png">
+            <div id="top_text">
+                <span>少发</span></br>
+                <span class="span1">感冒</span>
+            </div>
+
+        </div>
+        <div id="top_cont2">
+            <img src="img/che.png">
+            <div id="top_text">
+                <span>较适宜</span>
+                <span class="span1">洗车</span>
+            </div>
+
+        </div>
+    </div>
+    <div id="sugg_cont_bottom">
+        <div id="bottom_cont1">
+            <img src="img/ball.png">
+            <div id="top_text">
+                <span>较适宜</span>
+                <span class="span1">运动</span>
+            </div>
+
+        </div>
+        <div id="bottom_cont1">
+            <img src="img/sun.png">
+            <div id="top_text">
+                <span>强</span></br>
+                <span class="span1">防晒</span>
+            </div>
+
+        </div>
+        <div id="bottom_cont1">
+            <img src="img/fish.png">
+            <div id="top_text">
+                <span>适宜</span></br>
+                <span class="span1">钓鱼</span>
+            </div>
+
+        </div>
+        <div id="bottom_cont2">
+            <img src="img/box.png">
+            <div id="top_text">
+                <span>适宜</span></br>
+                <span class="span1">旅游</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer_top">
+        <div id="top_left">数据来源于中国天气网</div>
+        <div id="top_right">
+            <div id="right_left">反馈</div>
+            <div id="right_right">举报中心</div>
+        </div>
+    </div>
+    <div id="footer_bottom">
+        <P>Copyright &copy; 1998-2019 Tencent. All Rights Reserved</P>
+    </div>
+</div>
+</body>
+</html>

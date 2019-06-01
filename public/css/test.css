@@ -1,0 +1,242 @@
+body{
+    background: #F9F9F9;
+}
+#banner{
+    width: 90rem;
+    height: 80rem;
+    background: url(../img/cloud.jpg) no-repeat fixed;
+    -moz-background-size:100% 100%; 
+    background-size:100% 100%; 
+}
+#city{
+    width: 90rem;
+    height: 10rem;
+    line-height: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#return{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+#city_content{
+    width: 60rem;
+    height: 10rem;
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 4rem;
+}
+#share{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+}
+#now_weather{
+    width: 90rem;
+    height: 50rem;
+}
+#tem{
+    width: 90rem;
+    height: 26rem;
+    font-size: 10rem;
+    color: #fff;
+    text-align: center;
+    line-height: 40rem;
+}
+#wea{
+    width: 90rem;
+    height: 10rem;
+    font-size: 5rem;
+    text-align: center;
+    color: #fff;
+}
+#text{
+    width: 90rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 0;
+}
+#today_tomorrow{
+    width: 90rem;
+    height: 20rem;
+    background: #fff;
+    border-bottom: 0.2rem solid #aaa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#today{
+    width: 45rem;
+    height: 12rem;
+    border-right: 0.1rem solid #aaa; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#today_left,#tomorrow_left{
+    width: 21rem;
+    height: 12rem;
+    font-size: 2rem;
+    text-align: center;
+}
+#today_right,#tomorrow_right{
+    width: 21rem;
+    height: 12rem;
+    font-size: 2rem;
+    text-align: center;
+}
+#today_right img,#tomorrow_right img{
+    margin-top: 1.5rem;
+}
+#tomorrow{
+    width: 45rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#hours{
+    width: 90rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    background: #fff;
+    border-bottom: 0.1rem solid #aaa;
+}
+#hours_cont{
+    width: 90rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#cont1{
+    width: 17rem;
+    height: 16rem;
+    text-align: center;
+    font-size: 2rem;
+}
+#cont2,#cont4,#cont6,#cont8,#cont10{
+    color: #aaa;
+}
+#week{
+    width: 90rem;
+    height: 40rem;
+    background: #fff;
+    margin-top: 3rem;
+    border-top: 0.1rem solid #aaa;
+    border-bottom: 0.1rem solid #aaa;
+
+}
+#suggestion{
+    width: 90rem;
+    height: 30rem;
+    background: #fff;
+    margin-top: 3rem;
+    border-top: 0.1rem solid #aaa;
+    border-bottom: 0.1rem solid #aaa;
+}
+#sugg_cont_top{
+    width: 90rem;
+    height: 15rem;
+    border-bottom: 0.1rem solid #aaa;
+    display: flex;
+    flex-direction: row;
+}
+#top_cont1,#bottom_cont1,#top_cont2,#bottom_cont2{
+    width: 22.5rem;
+    height: 16rem;
+    border-right: 0.1rem solid #aaa;
+    text-align: center;
+    font-size: 3rem;
+    padding-top:1rem; 
+}
+#top_cont2,#bottom_cont2{
+    border-right:none; 
+}
+#top_text{
+    width: 10rem;
+    height: 8rem;
+    margin-left: 6rem;
+}
+.span1{
+    font-size: 2rem;
+    color: #aaa;
+}
+#sugg_cont_bottom{
+    width: 90rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+}
+#footer{
+    width: 90rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#footer_top,#footer_bottom{
+    width: 90rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer_bottom{
+    height: 4rem;
+}
+#top_left{
+    width: 45rem;
+    height: 8rem;
+    font-size: 2rem;
+    color: #aaa;
+    text-align: end;
+    line-height: 8rem;
+    margin-top: 2rem;  
+}
+#top_right{
+    width: 35rem;
+    height: 5rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #aaa;
+    line-height: 6rem;
+}
+#right_left{
+    width: 10rem;
+    height: 4rem;
+    margin-top: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    border-right: 0.1rem solid #aaa;
+}
+#right_right{
+    width: 20rem;
+    height: 5rem;
+    text-align: start;
+    margin-top: 6rem;
+
+}
+#footer_bottom{
+    line-height: 2rem;
+    font-size: 2rem;
+    color: #aaa;
+}
+#footer_bottom p{
+    margin-left: 26rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
